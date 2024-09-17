@@ -1,0 +1,19 @@
+
+
+syntax = "proto3";
+package com.example.RestController;
+option java_multiple_files = true;
+
+service ItemService {
+  rpc ReceiveItem (ItemRequest) returns (ItemResponse);
+}
+
+message ItemRequest {
+  string name = 1;
+  double price = 2;
+}
+
+message ItemResponse {
+  string message = 1;
+  int64 id = 2;
+}
